@@ -1,0 +1,23 @@
+{
+  "name": "automatepasswords",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aranesh22/automatePasswords.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aranesh22/automatePasswords/issues"
+  },
+  "homepage": "https://github.com/Aranesh22/automatePasswords#readme",
+  "dependencies": {
+    "fetch": "^1.1.0",
+    "node-fetch": "^2.6.1"
+  }
+}
