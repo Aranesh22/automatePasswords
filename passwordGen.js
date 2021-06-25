@@ -1,16 +1,11 @@
-const request = new XMLHttpRequest();  
-request.open("GET","https://www.passwordrandom.com/query?command=password"); 
-request.send(); 
-request.onload = () => { 
+const fetch = require('node-fetch'); 
 
-    if(request.status === 200) { 
+async function getURLS() { 
+    let res = await fetch('https://www.passwordrandom.com/query?command=password&format=json'); 
+    let data = await res.json(); 
+    return data; 
+}  
 
-        console.log(JSON.parse(request.response));
-    } 
-    else { 
-        console.log("ERROR");
-    }
+getURLS().then(data => console.log(data.char));
 
-
-
-}
+getURLS();
