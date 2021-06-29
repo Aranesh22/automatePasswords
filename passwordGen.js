@@ -1,5 +1,7 @@
 const fetch = require('node-fetch'); 
-let simplePassword = " "; 
+let simplePassword = " ";  
+
+const generator = require('generate-password');
 async function getSimplePassword(x) { 
     let res = await fetch('https://www.passwordrandom.com/query?command=password&format=json'); 
     let data = await res.json();  
@@ -15,7 +17,7 @@ async function getRandomWord() {
 
     let res = await fetch('https://random-words-api.vercel.app/word'); 
     let data = await res.json();  
-    getSimplePassword(data[0].word);
+    console.log(data[0].word);
  
 
 } 
@@ -24,4 +26,14 @@ async function getRandomWord() {
 
 getRandomWord();
 
-//console.log(simplePassword);
+//console.log(simplePassword); 
+
+
+var password = generator.generate({
+	length: 30,
+	numbers: true, 
+    symbols: true
+});
+
+// 'uEyMTw32v9'
+//console.log(password);
