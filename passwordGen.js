@@ -1,8 +1,8 @@
 let simplePassword = " ";  
 const generator = require('generate-password');
 const randomWords = require('random-words');
-let x; 
-let  password 
+let length; 
+let  password;
 function genPass(x) {
     password = generator.generate({
         length: x,
@@ -11,12 +11,14 @@ function genPass(x) {
     }); 
 }
 
-let rWord =  randomWords();
-x = 64 -rWord.length; 
-genPass(x); 
-let combPasswrod = rWord + password;
+for(let y= 0; y < 5;y++) {  
 
-console.log(combPasswrod + " " + combPasswrod.length); 
+    let rWord =  randomWords();
+    length = 32 -rWord.length; 
+    genPass(length); 
+    let combPasswrod = rWord + password;
+    console.log(combPasswrod + " " + combPasswrod.length); 
+}
 //passLength(x);
 // 'uEyMTw32v9'
 //console.log(password);
