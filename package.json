@@ -18,6 +18,8 @@
   "homepage": "https://github.com/Aranesh22/automatePasswords#readme",
   "dependencies": {
     "fetch": "^1.1.0",
-    "node-fetch": "^2.6.1"
+    "generate-password": "^1.6.0",
+    "node-fetch": "^2.6.1",
+    "random-words": "^1.1.1"
   }
 }
