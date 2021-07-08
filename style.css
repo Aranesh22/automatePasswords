@@ -5,4 +5,17 @@
     border: 3px solid green;
     padding: 10px;
 
+} 
+
+#inB { 
+    font-size: 24px;
+} 
+
+.hide{
+    display:none;
 }
+
+.show{
+    display:block;
+  }
+  
